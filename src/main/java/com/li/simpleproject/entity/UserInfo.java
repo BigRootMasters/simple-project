@@ -1,13 +1,12 @@
 package com.li.simpleproject.entity;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.Date;
+import java.io.Serial;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 用户信息表(UserInfo)实体类
@@ -19,6 +18,8 @@ import java.io.Serializable;
 @Getter
 @ToString(callSuper = true)
 public class UserInfo implements Serializable {
+
+    @Serial
     private static final long serialVersionUID = -32319597938904119L;
     /**
      * 主键id

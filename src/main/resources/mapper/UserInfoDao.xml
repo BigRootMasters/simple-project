@@ -96,7 +96,7 @@
     <!--新增所有列-->
     <insert id="insert" keyProperty="id" useGeneratedKeys="true">
         insert into user_info(user_name, user_image, password, created_time, updated_time, registed_time, delete_status)
-        values (#{userName}, #{userImage}, #{password}, #{createdTime}, #{updatedTime}, #{registedTime},
+        values (#id, #{userName}, #{userImage}, #{password}, #{createdTime}, #{updatedTime}, #{registedTime},
                 #{deleteStatus})
     </insert>
 

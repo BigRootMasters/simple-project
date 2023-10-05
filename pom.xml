@@ -186,19 +186,9 @@
 
 
 
-        <!--配置文件处理器元数据提示-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional> <!-- 表示依赖不会传递 -->
-        </dependency>
 
-        <!--Spring Test-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+
+
     </dependencies>
 
     <build>
