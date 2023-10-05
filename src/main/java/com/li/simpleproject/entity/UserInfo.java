@@ -2,6 +2,7 @@ package com.li.simpleproject.entity;
 
 import lombok.Data;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -13,6 +14,8 @@ import java.util.Date;
  */
 @Data
 public class UserInfo implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 214147925333302928L;
     /**
      * 主键id
      */
