@@ -10,7 +10,7 @@ import java.util.List;
  * 用户信息表(UserInfo)表数据库访问层
  *
  * @author makejava
- * @since 2023-10-05 03:11:02
+ * @since 2023-10-05 14:08:42
  */
 public interface UserInfoDao {
 

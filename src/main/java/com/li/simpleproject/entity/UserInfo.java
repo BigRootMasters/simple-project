@@ -1,26 +1,16 @@
 package com.li.simpleproject.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
-import java.io.Serial;
-import java.io.Serializable;
 import java.util.Date;
+import java.io.Serializable;
 
 /**
  * 用户信息表(UserInfo)实体类
  *
  * @author makejava
- * @since 2023-10-05 03:11:02
+ * @since 2023-10-05 14:08:42
  */
-@Setter
-@Getter
-@ToString(callSuper = true)
 public class UserInfo implements Serializable {
-
-    @Serial
-    private static final long serialVersionUID = -32319597938904119L;
+    private static final long serialVersionUID = 214147925333302928L;
     /**
      * 主键id
      */
@@ -54,6 +44,70 @@ public class UserInfo implements Serializable {
      */
     private String deleteStatus;
 
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getUserImage() {
+        return userImage;
+    }
+
+    public void setUserImage(String userImage) {
+        this.userImage = userImage;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Date getCreatedTime() {
+        return createdTime;
+    }
+
+    public void setCreatedTime(Date createdTime) {
+        this.createdTime = createdTime;
+    }
+
+    public Date getUpdatedTime() {
+        return updatedTime;
+    }
+
+    public void setUpdatedTime(Date updatedTime) {
+        this.updatedTime = updatedTime;
+    }
+
+    public Date getRegistedTime() {
+        return registedTime;
+    }
+
+    public void setRegistedTime(Date registedTime) {
+        this.registedTime = registedTime;
+    }
+
+    public String getDeleteStatus() {
+        return deleteStatus;
+    }
+
+    public void setDeleteStatus(String deleteStatus) {
+        this.deleteStatus = deleteStatus;
+    }
 
 }
 

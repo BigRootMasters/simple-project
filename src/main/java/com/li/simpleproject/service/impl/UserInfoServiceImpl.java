@@ -14,7 +14,7 @@ import javax.annotation.Resource;
  * 用户信息表(UserInfo)表服务实现类
  *
  * @author makejava
- * @since 2023-10-05 03:11:02
+ * @since 2023-10-05 14:08:42
  */
 @Service("userInfoService")
 public class UserInfoServiceImpl implements UserInfoService {
