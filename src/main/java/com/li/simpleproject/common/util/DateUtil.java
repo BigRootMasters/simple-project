@@ -12,13 +12,13 @@ import java.util.Date;
  */
 @Slf4j
 public class DateUtil {
-    public static String YYYY = "yyyy";
-
-    public static String YYYY_MM = "yyyy-MM";
-
-    public static String YYYY_MM_DD = "yyyy-MM-dd";
-
-    public static String YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss";
+//    public static String YYYY = "yyyy";
+//
+//    public static String YYYY_MM = "yyyy-MM";
+//
+//    public static String YYYY_MM_DD = "yyyy-MM-dd";
+//
+//    public static String YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss";
 
     /**
      * 获取当前Date型日期
