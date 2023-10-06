@@ -1,12 +1,5 @@
 package com.li.simpleproject.common.exception;
 
-/**
- * @author kuan
- * @version 1.0
- * @description: TODO
- * @date 2023/10/6 19:02
- */
-
 
 import com.li.simpleproject.common.enums.ResultCode;
 import com.li.simpleproject.common.result.ResultVO;
