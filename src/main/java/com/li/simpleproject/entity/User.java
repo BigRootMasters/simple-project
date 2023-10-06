@@ -6,7 +6,7 @@ import lombok.Data;
 /**
  * @author kuan
  * @version 1.0
- * @description: TODO
+ * @description: 测试实体类
  * @date 2023/10/6 18:24
  */
 
