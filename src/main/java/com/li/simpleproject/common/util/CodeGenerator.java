@@ -3,18 +3,16 @@ package com.li.simpleproject.common.util;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.OutputFile;
-import com.baomidou.mybatisplus.generator.config.TemplateConfig;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.function.Consumer;
 
 /**
  * @author kuan
  * @version 1.0
- * @description: TODO
+ * @description: myBatisPlus generator
  * @date 2023/10/6 12:12
  */
 
@@ -69,13 +67,6 @@ public class CodeGenerator {
                             .superClass(BaseMapper.class)
                             .formatMapperFileName("%sMapper")
                             .formatXmlFileName("%sMapper");
-                })
-                .templateConfig(new Consumer<TemplateConfig.Builder>() {
-                    @Override
-                    public void accept(TemplateConfig.Builder builder) {
-                        // 实体类使用我们自定义模板
-                        builder.entity("templates/myentity");
-                    }
                 })
                 .templateEngine(new FreemarkerTemplateEngine()) // 使用Freemarker引擎模板，默认的是Velocity引擎模板
                 .execute();
