@@ -9,8 +9,8 @@ import java.util.List;
 /**
  * 用户信息表(UserInfo)表数据库访问层
  *
- * @author makejava
- * @since 2023-10-05 14:08:42
+ * @author lk
+ * @since 2023-10-06 04:29:41
  */
 public interface UserInfoDao {
 
@@ -29,7 +29,7 @@ public interface UserInfoDao {
      * @param pageable 分页对象
      * @return 对象列表
      */
-    List<UserInfo> queryAllByLimit(UserInfo userInfo, @Param("pageable") Pageable pageable);
+    List<UserInfo> queryAllByLimit(@Param("userInfo") UserInfo userInfo, @Param("pageable") Pageable pageable);
 
     /**
      * 统计总行数

@@ -1,22 +1,25 @@
 package com.li.simpleproject.service.impl;
 
-import com.li.simpleproject.entity.UserInfo;
 import com.li.simpleproject.dao.UserInfoDao;
+import com.li.simpleproject.entity.UserInfo;
 import com.li.simpleproject.service.UserInfoService;
-import org.springframework.stereotype.Service;
+import jakarta.annotation.Resource;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
+
 
 /**
  * 用户信息表(UserInfo)表服务实现类
  *
- * @author makejava
- * @since 2023-10-05 14:08:42
+ * @author lk
+ * @since 2023-10-06 04:29:47
  */
 @Service("userInfoService")
+@Slf4j
 public class UserInfoServiceImpl implements UserInfoService {
     @Resource
     private UserInfoDao userInfoDao;
@@ -42,7 +45,8 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Override
     public Page<UserInfo> queryByPage(UserInfo userInfo, PageRequest pageRequest) {
         long total = this.userInfoDao.count(userInfo);
-        return new PageImpl<>(this.userInfoDao.queryAllByLimit(userInfo, pageRequest), pageRequest, total);
+        log.info("query data ,{}",total);
+        return new PageImpl<>(userInfoDao.queryAllByLimit(userInfo, pageRequest), pageRequest, total);
     }
 
     /**
@@ -52,9 +56,8 @@ public class UserInfoServiceImpl implements UserInfoService {
      * @return 实例对象
      */
     @Override
-    public UserInfo insert(UserInfo userInfo) {
-        this.userInfoDao.insert(userInfo);
-        return userInfo;
+    public int insert(UserInfo userInfo) {
+        return userInfoDao.insert(userInfo);
     }
 
     /**

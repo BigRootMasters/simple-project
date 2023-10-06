@@ -2,18 +2,18 @@ package com.li.simpleproject.controller;
 
 import com.li.simpleproject.entity.UserInfo;
 import com.li.simpleproject.service.UserInfoService;
+import jakarta.annotation.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 
 /**
  * 用户信息表(UserInfo)表控制层
  *
- * @author makejava
- * @since 2023-10-05 14:08:42
+ * @author lk
+ * @since 2023-10-06 04:29:39
  */
 @RestController
 @RequestMapping("userInfo")
@@ -54,7 +54,7 @@ public class UserInfoController {
      * @return 新增结果
      */
     @PostMapping
-    public ResponseEntity<UserInfo> add(UserInfo userInfo) {
+    public ResponseEntity<Integer> add(UserInfo userInfo) {
         return ResponseEntity.ok(this.userInfoService.insert(userInfo));
     }
 

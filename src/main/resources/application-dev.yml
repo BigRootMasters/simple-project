@@ -1,0 +1,26 @@
+server:
+  port: 8989
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/local?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+
+  # 配置swagger文档的访问路径，访问地址：http://127.0.0.1:8080/swagger-ui.html
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+  # Logger Config
+logging:
+  config: classpath:log4j2.xml
+  level:
+    com.li.com.li.simpleproject.mapper: debug

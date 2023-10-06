@@ -7,8 +7,8 @@ import org.springframework.data.domain.PageRequest;
 /**
  * 用户信息表(UserInfo)表服务接口
  *
- * @author makejava
- * @since 2023-10-05 14:08:42
+ * @author lk
+ * @since 2023-10-06 04:29:45
  */
 public interface UserInfoService {
 
@@ -35,7 +35,7 @@ public interface UserInfoService {
      * @param userInfo 实例对象
      * @return 实例对象
      */
-    UserInfo insert(UserInfo userInfo);
+    int insert(UserInfo userInfo);
 
     /**
      * 修改数据

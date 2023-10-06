@@ -1,21 +1,27 @@
 package com.li.simpleproject.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.io.Serial;
-import java.io.Serializable;
 import java.util.Date;
+import java.io.Serializable;
 
 /**
  * 用户信息表(UserInfo)实体类
  *
- * @author makejava
- * @since 2023-10-05 14:08:42
+ * @author lk
+ * @since 2023-10-06 04:29:43
  */
 @Data
+@Setter
+@Getter
+@ToString(callSuper = true)
 public class UserInfo implements Serializable {
     @Serial
-    private static final long serialVersionUID = 214147925333302928L;
+    private static final long serialVersionUID = -74688764345098668L;
     /**
      * 主键id
      */

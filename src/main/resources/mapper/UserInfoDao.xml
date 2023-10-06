@@ -33,28 +33,28 @@
         id, user_name, user_image, password, created_time, updated_time, registed_time, delete_status
         from user_info
         <where>
-            <if test="id != null">
+            <if test="userInfo.id != null">
                 and id = #{id}
             </if>
-            <if test="userName != null and userName != ''">
-                and user_name = #{userName}
+            <if test="userInfo.userName != null and userInfo.userName != ''">
+                and user_name = #{userInfo.userName}
             </if>
-            <if test="userImage != null and userImage != ''">
+            <if test="userInfo.userImage != null and userInfo.userImage != ''">
                 and user_image = #{userImage}
             </if>
-            <if test="password != null and password != ''">
+            <if test="userInfo.password != null and userInfo.password != ''">
                 and password = #{password}
             </if>
-            <if test="createdTime != null">
+            <if test="userInfo.createdTime != null">
                 and created_time = #{createdTime}
             </if>
-            <if test="updatedTime != null">
+            <if test="userInfo.updatedTime != null">
                 and updated_time = #{updatedTime}
             </if>
-            <if test="registedTime != null">
+            <if test="userInfo.registedTime != null">
                 and registed_time = #{registedTime}
             </if>
-            <if test="deleteStatus != null and deleteStatus != ''">
+            <if test="userInfo.deleteStatus != null and userInfo.deleteStatus != ''">
                 and delete_status = #{deleteStatus}
             </if>
         </where>
