@@ -6,6 +6,7 @@ import java.io.Serializable;
 
 /**
  * 用户菜单表
+ * @author kuan
  * @TableName user_menu
  */
 @Data

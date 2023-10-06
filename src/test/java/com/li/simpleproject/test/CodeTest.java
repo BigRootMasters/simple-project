@@ -1,11 +1,14 @@
 package com.li.simpleproject.test;
 
+import com.li.simpleproject.entity.UserInfo;
 import com.li.simpleproject.service.UserInfoService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
+
+import java.util.Date;
 
 /**
  * @author kuan
@@ -30,11 +33,17 @@ public class CodeTest {
 
     @Test
     public void testDB() {
-//        ArrayList<UserInfo> userInfos = new ArrayList<>();
-//        UserInfo userInfo = new UserInfo();
-//        userInfo.set
-//
-//        userInfoService.insert()
+
+        UserInfo userInfo = new UserInfo();
+        userInfo.setId(0L);
+        userInfo.setUserName("");
+        userInfo.setUserImage("");
+        userInfo.setPassword("");
+        userInfo.setCreatedTime(new Date());
+        userInfo.setUpdatedTime(new Date());
+        userInfo.setRegistedTime(new Date());
+        userInfo.setDeleteStatus("");
+        userInfoService.insert(userInfo);
     }
 
 

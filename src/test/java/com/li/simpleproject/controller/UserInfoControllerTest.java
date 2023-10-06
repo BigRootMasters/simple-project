@@ -1,7 +1,6 @@
 package com.li.simpleproject.controller;
 
 import com.li.simpleproject.common.enums.DeleteEnum;
-import com.li.simpleproject.dao.UserInfoDao;
 import com.li.simpleproject.entity.UserInfo;
 import com.li.simpleproject.service.UserInfoService;
 import jakarta.annotation.Resource;
@@ -20,8 +19,6 @@ import java.util.Date;
 class UserInfoControllerTest {
     @Resource
     UserInfoService userInfoService;
-    @Resource
-    UserInfoDao userInfoDao;
 
     @Test
     void queryByPage() {
@@ -62,7 +59,7 @@ class UserInfoControllerTest {
         userInfo.setUserImage("2");
         userInfo.setPassword("2");
         UserInfo update = userInfoService.update(userInfo);
-        log.info("UserInfo:{}", userInfo);
+        log.info("UserInfo:{}", update);
     }
 
     @Test

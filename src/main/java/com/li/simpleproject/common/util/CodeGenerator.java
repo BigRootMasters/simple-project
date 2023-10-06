@@ -31,43 +31,38 @@ public class CodeGenerator {
 //                            .enableSwagger()           //开启swagger
                             .commentDate("yyyy-MM-dd")//作者
                     ;
-
                 })
-                .packageConfig(builder -> {
-                    builder
-                            .parent("com.li")
-                            .moduleName("simpleproject")
-                            .entity("entity")
-                            .service("service")
-                            .serviceImpl("service.impl")
-                            .controller("controller")
-                            .mapper("dao")
-                            .xml("mapper")
-                            .pathInfo(Collections.singletonMap(OutputFile.xml, System.getProperty("user.dir") + "\\src\\main\\resources\\mapper"));
-                })
-                .strategyConfig(builder -> {
-                    builder.addInclude(tables)
-                            .addTablePrefix("p_")
-                            .serviceBuilder()
-                            .enableFileOverride()   //开启覆盖之前生成的文件
-                            .formatServiceFileName("%sService")
-                            .formatServiceImplFileName("%sServiceImpl")
-                            .entityBuilder()
-                            .enableLombok()
-                            .logicDeleteColumnName("deleted")
-                            .enableTableFieldAnnotation()
-                            .controllerBuilder()
-                            // 映射路径使用连字符格式，而不是驼峰
-                            .enableHyphenStyle()
-                            .formatFileName("%sController")
-                            .enableRestStyle()
-                            .mapperBuilder()
-                            //生成通用的resultMap
-                            .enableBaseResultMap()
-                            .superClass(BaseMapper.class)
-                            .formatMapperFileName("%sMapper")
-                            .formatXmlFileName("%sMapper");
-                })
+                .packageConfig(builder -> builder
+                        .parent("com.li")
+                        .moduleName("simpleproject")
+                        .entity("entity")
+                        .service("service")
+                        .serviceImpl("service.impl")
+                        .controller("controller")
+                        .mapper("dao")
+                        .xml("mapper")
+                        .pathInfo(Collections.singletonMap(OutputFile.xml, System.getProperty("user.dir") + "\\src\\main\\resources\\mapper")))
+                .strategyConfig(builder -> builder.addInclude(tables)
+                        .addTablePrefix("p_")
+                        .serviceBuilder()
+                        .enableFileOverride()   //开启覆盖之前生成的文件
+                        .formatServiceFileName("%sService")
+                        .formatServiceImplFileName("%sServiceImpl")
+                        .entityBuilder()
+                        .enableLombok()
+                        .logicDeleteColumnName("deleted")
+                        .enableTableFieldAnnotation()
+                        .controllerBuilder()
+                        // 映射路径使用连字符格式，而不是驼峰
+                        .enableHyphenStyle()
+                        .formatFileName("%sController")
+                        .enableRestStyle()
+                        .mapperBuilder()
+                        //生成通用的resultMap
+                        .enableBaseResultMap()
+                        .superClass(BaseMapper.class)
+                        .formatMapperFileName("%sMapper")
+                        .formatXmlFileName("%sMapper"))
                 .templateEngine(new FreemarkerTemplateEngine()) // 使用Freemarker引擎模板，默认的是Velocity引擎模板
                 .execute();
     }

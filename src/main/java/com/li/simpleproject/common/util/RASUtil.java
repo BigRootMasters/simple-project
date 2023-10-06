@@ -8,4 +8,7 @@ package com.li.simpleproject.common.util;
  */
 
 public class RASUtil {
+    public static void main(String[] args) {
+
+    }
 }
