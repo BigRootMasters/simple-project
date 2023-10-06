@@ -52,7 +52,7 @@ public class GlobalExceptionHandler {
         // 从异常对象中拿到ObjectError对象
         if (!e.getBindingResult().getAllErrors().isEmpty()) {
             for (ObjectError error : e.getBindingResult().getAllErrors()) {
-                list.add(error.getDefaultMessage().toString());
+                list.add(error.getDefaultMessage());
             }
         }
         // 然后提取错误提示信息进行返回
