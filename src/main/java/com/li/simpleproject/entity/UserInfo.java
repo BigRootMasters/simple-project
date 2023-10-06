@@ -49,7 +49,7 @@ public class UserInfo implements Serializable {
     /**
      * 注册时间
      */
-    private Date registedTime;
+    private Date registerTime;
     /**
      * 删除状态(0未删除,1已删除)
      */

@@ -45,7 +45,7 @@ class UserInfoControllerTest {
         userInfo.setPassword("1");
         userInfo.setCreatedTime(new Date());
         userInfo.setUpdatedTime(new Date());
-        userInfo.setRegistedTime(new Date());
+        userInfo.setRegisterTime(new Date());
         userInfo.setDeleteStatus(DeleteEnum.NOT_DELETED.getCode());
         int insert = userInfoService.insert(userInfo);
         log.info("UserInfo:{}", insert);

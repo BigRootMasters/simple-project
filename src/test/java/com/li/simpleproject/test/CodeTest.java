@@ -41,7 +41,7 @@ public class CodeTest {
         userInfo.setPassword("");
         userInfo.setCreatedTime(new Date());
         userInfo.setUpdatedTime(new Date());
-        userInfo.setRegistedTime(new Date());
+        userInfo.setRegisterTime(new Date());
         userInfo.setDeleteStatus("");
         userInfoService.insert(userInfo);
     }
