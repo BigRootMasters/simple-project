@@ -4,9 +4,11 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import lombok.Data;
 
 /**
  * <p>
@@ -19,7 +21,7 @@ import lombok.Data;
 @Data
 @TableName("tb_role_menu")
 public class TbRoleMenu implements Serializable {
-
+@Serial
 private static final long serialVersionUID = 1L;
 
 /**

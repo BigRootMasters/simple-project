@@ -2,6 +2,10 @@ package com.li.simpleproject.entity;
 
 
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+import java.io.Serial;
 import java.util.Date;
 import java.io.Serializable;
 
@@ -11,8 +15,11 @@ import java.io.Serializable;
  * @author lk
  * @since 2023-10-06 05:19:01
  */
-@SuppressWarnings("serial")
+@Data
+@EqualsAndHashCode(callSuper = true)
 public class OrderInfo extends Model<OrderInfo> {
+    @Serial
+    private static final long serialVersionUID = -111719780394087093L;
     //主键id
     private Integer id;
     //订单id

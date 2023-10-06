@@ -3,6 +3,7 @@ package com.li.simpleproject.common.util;
 import com.li.simpleproject.entity.User;
 import lombok.extern.slf4j.Slf4j;
 
+import java.io.Serial;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -20,7 +21,11 @@ import java.util.stream.Collectors;
 public class StreamUtil {
 
     private static List<User> getUserList() {
-        return new ArrayList<User>() {{
+        return new ArrayList<>() {
+            @Serial
+            private static final long serialVersionUID = -5740856588642853284L;
+
+            {
             add(new User("周润发", "166", 52));
             add(new User("周星驰", "155", 42));
             add(new User("刘德华", "177", 62));
