@@ -47,4 +47,22 @@ public class CodeTest {
     }
 
 
+    @Test
+    public void testFinally() {
+        String s = testFin();
+        log.info(s);
+    }
+
+    public String testFin(){
+        try {
+            log.info("log try");
+            throw new RuntimeException("Exception");
+        } catch (Exception e) {
+            log.info("log ex");
+            return "catch";
+        } finally {
+            log.info("finally");
+        }
+    }
+
 }
